@@ -5,7 +5,7 @@
   pnpm,
 }:
 mkShell {
-  name = "matthew-hre.com";
+  name = "hackathon-prep";
 
   packages = [
     nodejs_23

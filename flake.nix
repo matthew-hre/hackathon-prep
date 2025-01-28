@@ -1,5 +1,5 @@
 {
-  description = "matthew-hre.com";
+  description = "Hackathon Prep";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-24.11";

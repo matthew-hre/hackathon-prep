@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hackathon Prep
 
-## Getting Started
+[![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
 
-First, run the development server:
+## What Is This?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is my attempt to learn some cool new tools and technologies for the
+upcoming CalgaryHacks 2025 event, while hopefully building something useful. The
+idea is to create a study app that helps students generate practice quizzes from
+their lecture slides and notes. It uses Cohere’s Command R+ model in combination
+with their Retrieval-Augmented Generation (RAG) tech to generate questions based
+on uploaded materials.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What I'm Trying To Learn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [ ] **Drizzle ORM**: _Anything_ is better than Supabase's built in ORM.
+- [ ] **Docker**: Would love to run my own Postgres instance locally.
+- [ ] **Custom Auth**: Will try to spin up auth with NextAuth.
+- [ ] **TailwindCSS V4**: The less files in the root of my project, the better.
+- [ ] **Command R+ / RAG**: I work for Cohere, so this only makes sense.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Lecture Material Upload**: Users should be able to upload PDFs or text files
+  of their lecture content.
+- **Quiz Generation**: Users should be able to generate quizzes based on
+  lecture(s) content.
+- **Custom Authenication**: Users content is private, and is individual to each
+  user.
+- **Progress Tracking**: This is a stretch past the anticipated scope of this
+  project, but a progress bar of how "versed" I am in a given subject would be
+  cool.
