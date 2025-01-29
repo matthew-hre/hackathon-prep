@@ -1,6 +1,7 @@
 {
   mkShell,
   alejandra,
+  docker-compose,
   nodejs_23,
   pnpm,
 }:
@@ -10,6 +11,8 @@ mkShell {
   packages = [
     nodejs_23
     pnpm
+
+    docker-compose
 
     alejandra
   ];
