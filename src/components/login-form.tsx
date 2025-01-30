@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Github } from "lucide-react";
 
 import { signIn } from "@/auth";
+import Link from "next/link";
 
 export function LoginForm({
   className,
@@ -32,7 +33,7 @@ export function LoginForm({
               <form
                 action={async () => {
                   "use server";
-                  await signIn("github", { redirectTo: "/" });
+                  await signIn("github", { redirectTo: "/dashboard" });
                 }}
               >
                 <Button variant="outline" className="w-full">
@@ -76,9 +77,9 @@ export function LoginForm({
             </form>
             <div className="text-center text-sm">
               Don&apos;t have an account?{" "}
-              <a href="#" className="underline underline-offset-4">
+              <Link href="/signup" className="underline underline-offset-4">
                 Sign up
-              </a>
+              </Link>
             </div>
           </div>
         </CardContent>
