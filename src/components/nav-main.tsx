@@ -19,20 +19,18 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
-export function NavMain({
-  items,
-}: {
-  items: {
+interface NavMainProps {
+  title: string;
+  url: string;
+  icon: LucideIcon;
+  isActive?: boolean;
+  items?: {
     title: string;
     url: string;
-    icon: LucideIcon;
-    isActive?: boolean;
-    items?: {
-      title: string;
-      url: string;
-    }[];
   }[];
-}) {
+}
+
+export function NavMain({ items }: { items: NavMainProps[] }) {
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Your Content</SidebarGroupLabel>

@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node ./src/db/seed.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.4",

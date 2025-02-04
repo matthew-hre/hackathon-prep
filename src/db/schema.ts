@@ -97,3 +97,39 @@ export const authenticators = pgTable(
     },
   ]
 );
+
+export const course = pgTable("course", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  userId: text("userId")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  createdAt: timestamp("createdAt", { mode: "date" }).defaultNow(),
+});
+
+export const lecture = pgTable("lecture", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  courseId: text("courseId")
+    .notNull()
+    .references(() => course.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  createdAt: timestamp("createdAt", { mode: "date" }).defaultNow(),
+});
+
+export const lectureContent = pgTable("lecture_content", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  lectureId: text("lectureId")
+    .notNull()
+    .references(() => lecture.id, { onDelete: "cascade" }),
+  fileName: text("fileName").notNull(),
+  fileType: text("fileType").notNull(),
+  fileSize: integer("fileSize").notNull(),
+  fileUrl: text("fileUrl").notNull(),
+  uploadedAt: timestamp("uploadedAt", { mode: "date" }).defaultNow(),
+});
